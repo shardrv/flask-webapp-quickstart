@@ -189,6 +189,14 @@ To clean up your Azure resources, delete the resource group
   code .
   ```
 
+- Select the correct python interpreter from the lower half corner of the VS Code screen
+
+![screenshot] (https://github.com/shardrv/flask-webapp-quickstart/blob/master/Images/vscodeshot.png)
+
+
+
+
+
 
 
 
