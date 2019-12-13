@@ -189,11 +189,11 @@ To clean up your Azure resources, delete the resource group
   code .
   ```
 
-- Select the correct python interpreter from the lower half corner of the VS Code screen
+- Select the correct python interpreter from the lower half corner of the VS Code screen and the select the virtual environment python interpreter
 
-![Screenshot](https://github.com/shardrv/flask-webapp-quickstart/blob/master/Images/vscodeshot.png)
+    ![Screenshot](https://github.com/shardrv/flask-webapp-quickstart/blob/master/Images/vscodeshot.png)
 
-
+- Now right click on the main.py file from the navigation bar and select **Run Python File in Terminal**. This will start the web app with the server address. If you use ```Ctrl+Click``` on the web address, it opens it in the web page. 
 
 
 
