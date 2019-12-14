@@ -219,8 +219,9 @@ To clean up your Azure resources, delete the resource group
 
 - Go to the **Docker** section of the VS Code and find the webapp currently built. Right click and click on **Push**. This will upload the container to Azure App service.  
 
-- Check out the **Registries** tab in the **Docker** extension in VSCode. The version of the deployed app image will be listed here. Right click on the image file and click on **Deploy Image to Azure App Service**
+- Check out the **Registries** tab in the **Docker** extension in VSCode. The version of the deployed app image will be listed here. Right click on the image file and click on **Deploy Image to Azure App Service**. Go through the prompts of creating the service name and deploy the app.
 
+- Set the port number as the Dockerfile has the docker container listening to port 8000. Go to Azure App Service -> App name -> Application Settings -> Right click to add new setting -> Type ```WEBSITE_PORT``` set to ```8000```. Then right click and to restart the app and then click **Browse Website** to view.
 
 
 
