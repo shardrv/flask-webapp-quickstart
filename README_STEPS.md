@@ -193,10 +193,33 @@ To clean up your Azure resources, delete the resource group
 
     ![Screenshot](https://github.com/shardrv/flask-webapp-quickstart/blob/master/Images/vscodeshot.png)
 
+- A pop up showing the installation requirement of pylint comes up. Click Install and let it run in the VS Code terminal.
+  - Fix for  
+  ```Can not perform a '--user' install. User site-packages are not visible in this virtualenv``` 
+  Remove the ```--user ``` from the VS Code terminal and run the command again
+
 - Now right click on the main.py file from the navigation bar and select **Run Python File in Terminal**. This will start the web app with the server address. If you use ```Ctrl+Click``` on the web address, it opens it in the web page. 
 
 
+## Dockerize and Deploy to Azure Web Apps
 
+- Use ```Ctrl+Shift+P``` in VS Code to open the command interface on the app. Search for **Azure Sign In** and hit Enter. It will provide the login details for Microsoft Azure and then links the VS Code with Microsoft Azure. 
+- Click on **Create Resource** in the dashboard.
+  - Use the basic subscription, with unique username and login enabled to login with the credentials 
+
+- Once the Container has been deployed, goto the Access Keys of the resource to see the login details
+
+- Go back to VS Code command line 
+  ```
+  docker login [Container name].azurecr.io
+  ```
+  - Enter the username and password as in the resource group detials
+
+- VS Code terminal hit ```Ctrl+Shift+P``` then ```Docker: Build Image``` select the ```Dockerfile``` . The prompt will ask for the image name so the prefix needs to be added with the name of the container as: ```[containername].azurecr.io/flask-webapp-quickstart:latest```
+
+- Go to the **Docker** section of the VS Code and find the webapp currently built. Right click and click on **Push**. This will upload the container to Azure App service.  
+
+- Check out the **Registries** tab in the **Docker** extension in VSCode. The version of the deployed app image will be listed here. Right click on the image file and click on **Deploy Image to Azure App Service**
 
 
 
